@@ -1,0 +1,74 @@
+insert into WEBS.ENTITLED_PRODUCT_FEATURE (
+    ENTITLED_PRODUCT_FEATURE_ID,
+    ENTITLED_PRODUCT_ID,
+    FEATURE_OFFER_ID,
+    FEATURE_CODE,
+    ENTITLED_FEATURE_STATE,
+    SERVICE_STATE_ID,
+    ENTITLESTATE_CHANGE_REASON_ID,
+    CREATE_DATE,
+    UPDATE_DATE
+)
+values (
+    5,
+    100120,
+    0,
+    'HOST_5_USER',
+    'ACTIVE',
+    103,
+    null,
+    '2019-08-05',
+    '2019-09-05'
+);
+insert into WEBS.ENT_PROD_FEAT_PROCESSING (
+    ENT_PROD_FEAT_PROCESSING_ID,
+    ENTITLED_STATE,
+    PROCESSING_STATE,
+    START_DATE,
+    END_DATE,
+    CREATE_DATE,
+    UPDATE_DATE,
+    ENTITLED_PRODUCT_FEATURE_ID
+)
+values (
+    55,
+    'ACTIVE',
+    'PENDING',
+    CURRENT_DATE,
+    null,
+    CURRENT_DATE,
+    null,
+    5
+);
+insert into WEBS.QBES_HOSTING_REQUEST_STAGING (
+    QBES_HOST_REQ_STG_ID,
+    ACTIVITY_TYPE,
+    EFFECTIVE_DATE,
+    CAPTURE_TIME,
+    CUSTOMER_ID,
+    SUBSCRIPTION_ID,
+    LICENSE,
+    EOC,
+    STATUS,
+    ERROR_MESSAGE,
+    ABORT_REASON,
+    CREATE_DATE,
+    UPDATE_DATE,
+    ENT_PROD_FEAT_PROCESSING_ID
+) values (
+    555,
+    'NEW',
+    '2019-10-05',
+    '2019-10-05',
+    5555,
+    55555,
+    'Lic5',
+    'EOC5',
+    'IN_PROGRESS',
+    null,
+    null,
+    CURRENT_DATE,
+    null,
+    55
+);
+
